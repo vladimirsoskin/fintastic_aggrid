@@ -1,0 +1,32 @@
+[
+  {
+    "ARR": 11609.28,
+    "OwnerName": "Logan Clark",
+    "Ownerid": "0050Y000002xDtOQAU",
+    "SourceType": "Direct",
+    "account": "Lopez Ltd",
+    "currency": "GBP",
+    "date": "2020-10-31",
+    "id": "0011v0000293KpaAAE",
+    "industry": "Information Technology and Services",
+    "new_logo": "",
+    "previous_ARR": 11809.44,
+    "region": "UK",
+    "tier": "Small"
+  },
+  {
+    "ARR": 13210.56,
+    "OwnerName": "Logan Clark",
+    "Ownerid": "0050Y000002xDtOQAU",
+    "SourceType": "Direct",
+    "account": "Lopez Ltd",
+    "currency": "GBP",
+    "date": "2020-11-30",
+    "id": "0011v0000293KpaAAE",
+    "industry": "Information Technology and Services",
+    "new_logo": "",
+    "previous_ARR": 11609.28,
+    "region": "UK",
+    "tier": "Small"
+  }
+]
