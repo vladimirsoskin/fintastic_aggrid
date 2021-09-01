@@ -67,8 +67,8 @@ function numberFormatter(params) {
     return Intl.NumberFormat().format(params.value);
 }
 
-function monthValueGetter(params, month){
-    if (getMonthName(params.data.date) === month){
+function monthValueGetter(params, month) {
+    if (getMonthName(params.data.date) === month) {
         return params.data.ARR;
     } else {
         return 0;
@@ -82,6 +82,24 @@ export default function App() {
         setMonthList(getMonthList(accounts, "date"));
         setRowData(accounts);
     }, []);
+
+    // const [gridColumnApi, setGridColumnApi] = useState(null);
+
+    function sortByArrDesc(gridColumnApi) {
+        gridColumnApi.applyColumnState({
+            state: [{
+                colId: 'ARR',
+                sort: 'desc',
+            }],
+            defaultState: {sort: null},
+        });
+    }
+
+    function onGridReady(params) {
+        // setGridApi(params.api);
+        // setGridColumnApi(params.columnApi);
+        sortByArrDesc(params.columnApi);
+    }
 
     return (
         <div className="App">
@@ -106,6 +124,7 @@ export default function App() {
                         cellRenderer: "agGroupCellRenderer",
                         // cellRendererParams: { footerValueGetter: "Total (" + x + ")" },
                     }}
+                    onGridReady={onGridReady}
                     sideBar={true}
                     rowData={rowData}
                     suppressAggFuncInHeader={true}
